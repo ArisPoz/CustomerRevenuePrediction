@@ -6,7 +6,7 @@ pd.options.mode.chained_assignment = None
 pd.options.display.max_columns = 999
 
 """
-Created on Fri Jul 26 13:50:12 2019
+Created on Fri Jul 26 13:58:19 2019
 
 @author: apozidis
 """
