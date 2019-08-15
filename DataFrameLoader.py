@@ -23,6 +23,7 @@ def load_df_clean_json(csv_path, chunk_size=50000):
         shape += chunk.shape[0]
         print("Loaded : " + str(shape) + " lines.")
         chunk_list.append(chunk)
+
     print("Concat chunks in one dataframe.")
     df = pd.concat(chunk_list)
     print("Converting json columns to data frame columns.")
@@ -35,7 +36,7 @@ def load_df_clean_json(csv_path, chunk_size=50000):
     return df
 
 
-def load_df(csv_path, chunk_size=50000):
+def load_df(csv_path, gui, chunk_size=50000):
     chunk_list = []
     print("Loading csv data from " + csv_path + " to dataframe.")
     shape = 0
@@ -43,6 +44,7 @@ def load_df(csv_path, chunk_size=50000):
         shape += chunk.shape[0]
         print("Loaded : " + str(shape) + " lines.")
         chunk_list.append(chunk)
+        gui.update_progressbar(gui.get_progressbar_status() + 2)
     print("Concat chunks in one dataframe.")
     df = pd.concat(chunk_list)
 
