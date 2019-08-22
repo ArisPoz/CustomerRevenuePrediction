@@ -12,7 +12,7 @@ The 80/20 rule has proven true for many businesses–only a small percentage of 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GNU License - see the [LICENSE.md](https://github.com/ArisPoz/CustomerRevenuePrediction/blob/master/LICENSE) file for details
 
 ## Acknowledgments
 
