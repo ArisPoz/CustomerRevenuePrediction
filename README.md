@@ -23,4 +23,5 @@ This project is licensed under the GNU License - see the [LICENSE.md](https://gi
 
 # Screenshots
 ![GitHub Logo](/resources/StartScreen.PNG)
-Format: ![Alt Text](url)
+![GitHub Logo](/resources/AfterLoading.PNG)
+![GitHub Logo](/resources/ExtendedWindow.PNG)
