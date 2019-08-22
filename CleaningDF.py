@@ -11,7 +11,7 @@ Created on Sat Jul 27 17:28:02 2019
 
 
 def filling_na_values(df):  # fillna numeric feature
-    df['totals.pageviews'].fillna(1, inplace=True)  # filling NA's with 1
+    df['totals.pageviews'].fillna(1, inplace=True) # filling NA's with 1
     df['totals.newVisits'].fillna(0, inplace=True)  # filling NA's with 0
     df['totals.bounces'].fillna(0, inplace=True)  # filling NA's with 0
     df['trafficSource.isTrueDirect'].fillna(False, inplace=True)  # filling boolean with False
@@ -80,7 +80,7 @@ def replace_huge_string(df):
     string_to_change = ['not available in demo dataset', '(not set)',
                         '(not provided)', '(none)', 'unknown.unknown', 'unknown']
     for string in string_to_change:
-        df = df.replace(string, 'NaN')
+        df = df.replace(string, '')
     return df
 
 
@@ -92,3 +92,11 @@ def date_process(df):
     df["_year"] = df['date'].dt.year  # extracting day
     df['_visitHour'] = (df['visitStartTime'].apply(lambda x: str(datetime.fromtimestamp(x).hour))).astype(int)
     return df  # returning the df after the transformations
+
+
+def add_date_features(df):
+    df['date'] = pd.to_datetime(df['visitStartTime'], unit='s')
+    df['sess_date_dow'] = df['date'].dt.dayofweek
+    df['sess_date_hours'] = df['date'].dt.hour
+    df['sess_date_dom'] = df['date'].dt.day
+    return df

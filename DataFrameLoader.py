@@ -12,7 +12,7 @@ Created on Fri Jul 26 13:58:19 2019
 """
 
 
-def load_df_clean_json(csv_path, chunk_size=50000):
+def load_df_clean_json(csv_path, gui, chunk_size=50000):
     json_columns = ['device', 'geoNetwork', 'totals', 'trafficSource']
     chunk_list = []
     print("Loading csv data from " + csv_path + " to dataframe.")
@@ -23,6 +23,7 @@ def load_df_clean_json(csv_path, chunk_size=50000):
         shape += chunk.shape[0]
         print("Loaded : " + str(shape) + " lines.")
         chunk_list.append(chunk)
+        gui.update_progressbar(gui.get_progressbar_status() + 1)
 
     print("Concat chunks in one dataframe.")
     df = pd.concat(chunk_list)
@@ -32,6 +33,7 @@ def load_df_clean_json(csv_path, chunk_size=50000):
         column_as_df = json_normalize(df[column])
         column_as_df.columns = [f"{column}.{sub_column}" for sub_column in column_as_df.columns]
         df = df.drop(column, axis=1).merge(column_as_df, right_index=True, left_index=True)
+        gui.update_progressbar(gui.get_progressbar_status() + 1)
 
     return df
 

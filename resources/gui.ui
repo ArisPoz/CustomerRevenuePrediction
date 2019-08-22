@@ -9,19 +9,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1054</width>
+    <width>1500</width>
     <height>858</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>1054</width>
+    <width>1500</width>
     <height>858</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>1054</width>
+    <width>1500</width>
     <height>858</height>
    </size>
   </property>
@@ -972,7 +972,7 @@ p, li { white-space: pre-wrap; }
      <x>240</x>
      <y>640</y>
      <width>251</width>
-     <height>16</height>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
@@ -1281,6 +1281,47 @@ p, li { white-space: pre-wrap; }
      <string>Prediction</string>
     </property>
    </widget>
+  </widget>
+  <widget class="QPushButton" name="button_openConsole">
+   <property name="geometry">
+    <rect>
+     <x>1050</x>
+     <y>10</y>
+     <width>20</width>
+     <height>841</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>►</string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="console">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>1080</x>
+     <y>10</y>
+     <width>411</width>
+     <height>841</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::StrongFocus</enum>
+   </property>
   </widget>
  </widget>
  <resources/>
