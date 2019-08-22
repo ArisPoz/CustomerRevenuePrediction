@@ -20,3 +20,8 @@ This project is licensed under the GNU License - see the [LICENSE.md](https://gi
 * International Hellenic University
 * Kaggle Competition 
 * https://www.kaggle.com/c/ga-customer-revenue-prediction
+
+# Screenshots
+![GitHub Logo](/resources/StartScreen.PNG)
+![GitHub Logo](/resources/AfterLoading.PNG)
+![GitHub Logo](/resources/ExtendedWindow.PNG)
