@@ -24,7 +24,7 @@ This project is licensed under the GNU License - see the [LICENSE.md](https://gi
 # Screenshots
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
-|<img width="1604" alt="Screen1" src="/resources/StartScreen.PNG"> | <img width="1604" alt="Screen2" src="/resources/AfterLoading.PNG"> | <img width="1604" alt=Screen3" src="/resources/ExtendedWindow.PNG">|
+|<img width="1604" alt="Screen1" src="/resources/StartScreen.PNG">|<img width="1604" alt="Screen2" src="/resources/AfterLoading.PNG">|<img width="1604" alt=Screen3" src="/resources/ExtendedWindow.PNG">|
 
 # Graphs
 | | | |
