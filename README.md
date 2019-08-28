@@ -2,13 +2,20 @@
 
 The 80/20 rule has proven true for many businesses–only a small percentage of customers produce most of the revenue. As such, marketing teams are challenged to make appropriate investments in promotional strategies.Analyzing a Google Merchandise Store (GStore) customer dataset to predict revenue per customer. 
 
-## Getting Started
+## Objective
 
+* Exploring the given Dataset and make some inferences
+* Normalizing and flattening json columns
+* Dropping Constant Columns
+* Data Cleaning
+* Analyzing the Dataset with statistical analysis
+* Data visualization
+* Creating a GUI that will represent all the graphs and outputs of the analysis
+* Getting started with a lightgbm model
 
 ## Authors
 
 * **Aristotelis Pozidis** - [ArisPoz](https://github.com/ArisPoz)
-
 
 ## License
 
