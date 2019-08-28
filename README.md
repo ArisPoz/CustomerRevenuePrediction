@@ -22,19 +22,20 @@ This project is licensed under the GNU License - see the [LICENSE.md](https://gi
 * https://www.kaggle.com/c/ga-customer-revenue-prediction
 
 # Screenshots
+
 ![GitHub Logo](/resources/StartScreen.PNG)
 ![GitHub Logo](/resources/AfterLoading.PNG)
 ![GitHub Logo](/resources/ExtendedWindow.PNG)
 
-# Graphs
-![GitHub Logo](/plots/80_20.png)
-![GitHub Logo](/plots/browser.png)
-![GitHub Logo](/plots/channel.png)
-![GitHub Logo](/plots/cities.png)
-![GitHub Logo](/plots/countries.png)
-![GitHub Logo](/plots/os.png)
-![GitHub Logo](/plots/transaction_os.png)
-![GitHub Logo](/plots/revenue_browser.png)
-![GitHub Logo](/plots/sub_continent.png)
-![GitHub Logo](/plots/importance.png)
 
+# Graphs
+
+|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="/plots/80_20.png">  |  <img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="/plots/browser.png">|
+<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="/plots/channel.png">|
+|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="/plots/cities.png">  |  
+<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="/plots/countries.png">|
+<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="/plots/os.png">|
+|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="/plots/transaction_os.png">  |  
+<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="/plots/revenue_browser.png">|
+<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="/plots/sub_continent.png">|
+<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="/plots/importance.png">
