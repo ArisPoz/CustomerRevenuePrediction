@@ -29,8 +29,9 @@ This project is licensed under the GNU License - see the [LICENSE.md](https://gi
 
 
 # Graphs
-
-|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="/plots/80_20.png">  |  <img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="/plots/browser.png">|
+| | | |
+|:-------------------------:|:-------------------------:|:-------------------------:|
+|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="/plots/80_20.png"> | <img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="/plots/browser.png">|
 <img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="/plots/channel.png">|
 |<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="/plots/cities.png">  |  
 <img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="/plots/countries.png">|
