@@ -49,9 +49,7 @@ def discovering_constant_columns(df):
                'device.mobileDeviceMarketingName', 'device.mobileDeviceModel', 'device.mobileInputSelector',
                'device.operatingSystemVersion', 'device.screenColors', 'device.screenResolution',
                'geoNetwork.cityId', 'geoNetwork.latitude', 'geoNetwork.longitude', 'geoNetwork.networkLocation',
-               'trafficSource.adwordsClickInfo.criteriaParameters', 'trafficSource.adwordsClickInfo.gclId',
-               'trafficSource.campaign', 'trafficSource.adwordsClickInfo.page', 'trafficSource.referralPath',
-               'trafficSource.adwordsClickInfo.slot', 'trafficSource.adContent', 'trafficSource.keyword']
+               'trafficSource.adwordsClickInfo.criteriaParameters', 'trafficSource.adContent']
     return to_drop
 
 

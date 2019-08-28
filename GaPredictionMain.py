@@ -1,10 +1,10 @@
+import os
 from PyQt5 import QtCore, QtGui, QtWidgets, uic
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
+from PyQt5.QtWebEngineWidgets import QWebEngineView
 import sys
-import os
 import datetime as dt
 import DataFrameLoader as dfLoader
-import CleaningDF as cDF
 import Plots as showPlots
 import Prediction as pred
 
@@ -31,9 +31,14 @@ class Ui(QtWidgets.QWidget, Ui_MainWindow):
         self.setMaximumWidth(1070)
         self.setMinimumWidth(1070)
 
-        # hidden parts
+        # hidden/disabled/read-only parts
         self.label_PleaseWait.hide()
         self.console.hide()
+        self.console.setReadOnly(True)
+        self.console_output.setReadOnly(True)
+        self.button_prediction.setEnabled(False)
+        self.button_create_graph.setEnabled(False)
+        self.line_Column.setEditable(True)
 
         # button action listener
         self.button_close.clicked.connect(self.exit)
@@ -41,14 +46,27 @@ class Ui(QtWidgets.QWidget, Ui_MainWindow):
         self.button_load.clicked.connect(self.load)
         self.button_prediction.clicked.connect(self.predict)
         self.button_openConsole.clicked.connect(self.console_control)
+        self.button_create_graph.clicked.connect(self.create_graph)
 
         self.show()  # Show the GUI
 
-    def add_tab(self, name, figure, position , tooltip):
+    def add_tab(self, name, figure, position, tooltip):
         tab = QtWidgets.QWidget()
         canvas = FigureCanvas(figure)
         layout = QtWidgets.QVBoxLayout()
         layout.addWidget(canvas)
+        tab.setLayout(layout)
+        self.graph_tab.addTab(tab, name)
+        self.graph_tab.setTabToolTip(position, tooltip)
+        QtCore.QCoreApplication.processEvents()
+
+    def add_tab_web_page(self, name, url, position, tooltip):
+        tab = QtWidgets.QWidget()
+        web_tab = QWebEngineView()
+        web_url = QtCore.QUrl.fromLocalFile(r""+url)
+        web_tab.load(web_url)
+        layout = QtWidgets.QVBoxLayout()
+        layout.addWidget(web_tab)
         tab.setLayout(layout)
         self.graph_tab.addTab(tab, name)
         self.graph_tab.setTabToolTip(position, tooltip)
@@ -98,55 +116,48 @@ class Ui(QtWidgets.QWidget, Ui_MainWindow):
         showPlots.top_countries(self, df)
         showPlots.frequent_subcontinents(self, df)
 
+    def create_graph(self):
+        column = str(self.line_Column.currentText())
+        title = self.line_Title.text()
+        html = showPlots.pie_chart(train_df, column, title)
+        self.append_console('Created Pie graph with title :' + title)
+        self.add_tab_web_page(title, html, 15, column.capitalize() + "\n" + title.capitalize())
+
     def predict(self):
+        global test_df
+        self.label_PleaseWait.show()
+        self.label_PleaseWait.setText('Please Wait while test data are loading...')
+        self.console_output.append("Loading Test Data (~8GB).")
+        QtCore.QCoreApplication.processEvents()
+        test_df = dfLoader.load_test_set(self)
+        self.console_output.append("Successfully loaded test data.")
+        self.console_output.append("Starting Prediction ...")
+        self.label_PleaseWait.setText('Please Wait While Predicting...')
+        QtCore.QCoreApplication.processEvents()
         score = pred.predict_revenue_at_session_level(self, train_df, test_df)
         self.line_Prediction.setText(str(score))
-
-    def load(self):
-        self.label_PleaseWait.show()
-        global train_df, test_df
-        self.button_load.setEnabled(False)
-        self.update_progressbar(0)
-        self.console_output.append("Loading Data (~25GB).")
-        QtCore.QCoreApplication.processEvents()
-        self.console_output.append("Started at : " + str(dt.datetime.now().time()))
-        if os.path.exists("DataSets/train_cleaned.csv"):
-            self.console_output.append("Loading cleaned train dataset...")
-            train_df = dfLoader.load_df("DataSets/train_cleaned.csv", self)
-            self.console_output.append("Loading cleaned test dataset...")
-            test_df = dfLoader.load_df("DataSets/test_cleaned.csv", self)
-        else:
-            self.console_output.append("Loading train dataset...")
-            train_df = dfLoader.load_df_clean_json("DataSets/train.csv", self, 100000)
-            constants_columns = cDF.discovering_constant_columns(train_df)
-            train_df = clean_data(train_df, constants_columns)
-            train_df.to_csv("DataSets/train_cleaned.csv", index=False)
-
-            self.console_output.append("Loading test dataset...")
-            test_df = dfLoader.load_df_clean_json("DataSets/test.csv", self, 100000)
-            test_df = clean_data(test_df, constants_columns)
-            test_df.to_csv("DataSets/test_cleaned.csv", index=False)
-
-        self.console_output.append("Finished at : " + str(dt.datetime.now().time()))
-        self.console_output.append('Train data shape : ' + str(train_df.shape))
         self.console_output.append('Test data shape : ' + str(test_df.shape))
-
-        self.load_graphs(train_df)
-
-        self.console_output.append("Successfully loaded data.")
+        self.console_output.append("Prediction score (%) " + str(score * 100))
         self.update_progressbar(100)
         self.label_PleaseWait.hide()
 
+    def load(self):
+        global train_df
+        self.label_PleaseWait.show()
+        self.button_load.setEnabled(False)
+        self.console_output.append("Loading Train Data (~20GB).")
+        QtCore.QCoreApplication.processEvents()
+        self.console_output.append("Started at : " + str(dt.datetime.now().time()))
+        train_df = dfLoader.load_train_set(self)
+        self.console_output.append("Finished at : " + str(dt.datetime.now().time()))
+        self.console_output.append('Train data shape : ' + str(train_df.shape))
+        self.load_graphs(train_df)
 
-def clean_data(df, to_drop):
-    print("Data cleaning...")
-    df = cDF.drop_constant_columns(df, to_drop)
-    df = cDF.replace_huge_string(df)
-    df = cDF.filling_na_values(df)
-    df = cDF.normalizing(df)
-    df = cDF.add_date_features(df)
-    df = cDF.date_process(df)
-    return df
+        self.console_output.append("Successfully loaded train data.")
+        self.update_progressbar(100)
+        self.label_PleaseWait.hide()
+        self.button_prediction.setEnabled(True)
+        self.button_create_graph.setEnabled(True)
 
 
 def main():
