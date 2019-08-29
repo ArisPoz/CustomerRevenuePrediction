@@ -38,5 +38,7 @@ This project is licensed under the GNU License - see the [LICENSE](https://githu
 |:-------------------------:|:-------------------------:|:-------------------------:|
 |<img width="1604" alt="Rule 80/20" src="/plots/80_20.png"> | <img width="1604" alt="Browser" src="/plots/browser.png"> | <img width="1604" alt="Channel" src="/plots/channel.png">|
 |<img width="1604" alt="Cities" src="/plots/cities.png"> | <img width="1604" alt="Countries" src="/plots/countries.png"> | <img width="1604" alt="OS" src="/plots/os.png">|
-|<img width="1604" alt="Transactions By OS" src="/plots/transaction_os.png"> | <img width="1604" alt="Revenue By Browser" src="/plots/revenue_browser.png"> | <img width="1604" alt="SubContinents" src="/plots/sub_continent.png"> |
-|<img width="1604" alt="Importance" src="/plots/importance.png"> |
+|<img width="1604" alt="Transactions By OS" src="/plots/transaction_os.png"> | <img width="1604" alt="Revenue By Browser" src="/plots/revenue_browser.png"> | <img width="1604" alt="SubContinents" src="/plots/sub_continent.png"> ||
+
+# Demo of Application
+![](/resources/GA_Customer_Revenue_Prediction.gif)
