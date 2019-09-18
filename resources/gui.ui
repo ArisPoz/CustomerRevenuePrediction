@@ -9,20 +9,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1500</width>
-    <height>858</height>
+    <width>1072</width>
+    <height>749</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>1500</width>
-    <height>858</height>
+    <width>899</width>
+    <height>749</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>1500</width>
-    <height>858</height>
+    <width>1072</width>
+    <height>749</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -856,10 +856,10 @@ QToolTip {
   <widget class="QPushButton" name="button_close">
    <property name="geometry">
     <rect>
-     <x>950</x>
-     <y>820</y>
-     <width>93</width>
-     <height>28</height>
+     <x>772</x>
+     <y>720</y>
+     <width>101</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
@@ -869,10 +869,10 @@ QToolTip {
   <widget class="QPushButton" name="button_clear">
    <property name="geometry">
     <rect>
-     <x>950</x>
-     <y>780</y>
-     <width>93</width>
-     <height>28</height>
+     <x>662</x>
+     <y>720</y>
+     <width>101</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
@@ -882,10 +882,10 @@ QToolTip {
   <widget class="QPushButton" name="button_load">
    <property name="geometry">
     <rect>
-     <x>950</x>
-     <y>670</y>
-     <width>93</width>
-     <height>31</height>
+     <x>440</x>
+     <y>720</y>
+     <width>101</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
@@ -899,8 +899,8 @@ QToolTip {
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>670</y>
-     <width>481</width>
+     <y>560</y>
+     <width>421</width>
      <height>181</height>
     </rect>
    </property>
@@ -926,8 +926,8 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>1031</width>
-     <height>621</height>
+     <width>861</width>
+     <height>521</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -941,9 +941,9 @@ p, li { white-space: pre-wrap; }
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>640</y>
-     <width>221</width>
-     <height>23</height>
+     <y>540</y>
+     <width>191</width>
+     <height>16</height>
     </rect>
    </property>
    <property name="value">
@@ -956,10 +956,10 @@ p, li { white-space: pre-wrap; }
   <widget class="QPushButton" name="button_prediction">
    <property name="geometry">
     <rect>
-     <x>950</x>
-     <y>710</y>
-     <width>93</width>
-     <height>28</height>
+     <x>552</x>
+     <y>720</y>
+     <width>101</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
@@ -969,10 +969,10 @@ p, li { white-space: pre-wrap; }
   <widget class="QLabel" name="label_PleaseWait">
    <property name="geometry">
     <rect>
-     <x>240</x>
-     <y>640</y>
-     <width>251</width>
-     <height>21</height>
+     <x>200</x>
+     <y>540</y>
+     <width>231</width>
+     <height>16</height>
     </rect>
    </property>
    <property name="text">
@@ -982,10 +982,10 @@ p, li { white-space: pre-wrap; }
   <widget class="QGroupBox" name="top_values">
    <property name="geometry">
     <rect>
-     <x>510</x>
-     <y>660</y>
+     <x>440</x>
+     <y>540</y>
      <width>431</width>
-     <height>191</height>
+     <height>171</height>
     </rect>
    </property>
    <property name="title">
@@ -995,7 +995,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>30</y>
+      <y>20</y>
       <width>55</width>
       <height>16</height>
      </rect>
@@ -1011,7 +1011,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>30</y>
+      <y>20</y>
       <width>113</width>
       <height>22</height>
      </rect>
@@ -1024,7 +1024,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>60</y>
+      <y>50</y>
       <width>55</width>
       <height>16</height>
      </rect>
@@ -1040,7 +1040,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>60</y>
+      <y>50</y>
       <width>113</width>
       <height>22</height>
      </rect>
@@ -1053,7 +1053,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>90</y>
+      <y>80</y>
       <width>55</width>
       <height>16</height>
      </rect>
@@ -1069,7 +1069,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>90</y>
+      <y>80</y>
       <width>113</width>
       <height>22</height>
      </rect>
@@ -1082,7 +1082,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>120</y>
+      <y>110</y>
       <width>55</width>
       <height>16</height>
      </rect>
@@ -1098,7 +1098,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>120</y>
+      <y>110</y>
       <width>113</width>
       <height>22</height>
      </rect>
@@ -1111,7 +1111,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>150</y>
+      <y>140</y>
       <width>55</width>
       <height>16</height>
      </rect>
@@ -1127,7 +1127,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>150</y>
+      <y>140</y>
       <width>113</width>
       <height>22</height>
      </rect>
@@ -1140,7 +1140,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>220</x>
-      <y>60</y>
+      <y>50</y>
       <width>55</width>
       <height>16</height>
      </rect>
@@ -1153,7 +1153,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>220</x>
-      <y>30</y>
+      <y>20</y>
       <width>55</width>
       <height>16</height>
      </rect>
@@ -1169,7 +1169,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>300</x>
-      <y>30</y>
+      <y>20</y>
       <width>113</width>
       <height>22</height>
      </rect>
@@ -1185,7 +1185,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>300</x>
-      <y>150</y>
+      <y>140</y>
       <width>113</width>
       <height>22</height>
      </rect>
@@ -1201,7 +1201,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>300</x>
-      <y>90</y>
+      <y>80</y>
       <width>113</width>
       <height>22</height>
      </rect>
@@ -1217,7 +1217,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>300</x>
-      <y>60</y>
+      <y>50</y>
       <width>113</width>
       <height>22</height>
      </rect>
@@ -1233,7 +1233,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>300</x>
-      <y>120</y>
+      <y>110</y>
       <width>113</width>
       <height>22</height>
      </rect>
@@ -1246,7 +1246,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>220</x>
-      <y>90</y>
+      <y>80</y>
       <width>55</width>
       <height>16</height>
      </rect>
@@ -1259,7 +1259,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>220</x>
-      <y>120</y>
+      <y>110</y>
       <width>71</width>
       <height>16</height>
      </rect>
@@ -1272,7 +1272,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>220</x>
-      <y>150</y>
+      <y>140</y>
       <width>71</width>
       <height>16</height>
      </rect>
@@ -1285,10 +1285,10 @@ p, li { white-space: pre-wrap; }
   <widget class="QPushButton" name="button_openConsole">
    <property name="geometry">
     <rect>
-     <x>1050</x>
+     <x>880</x>
      <y>10</y>
      <width>20</width>
-     <height>841</height>
+     <height>731</height>
     </rect>
    </property>
    <property name="font">
@@ -1313,10 +1313,10 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="geometry">
     <rect>
-     <x>1080</x>
+     <x>910</x>
      <y>10</y>
-     <width>411</width>
-     <height>731</height>
+     <width>151</width>
+     <height>541</height>
     </rect>
    </property>
    <property name="focusPolicy">
@@ -1326,9 +1326,9 @@ p, li { white-space: pre-wrap; }
   <widget class="QPushButton" name="button_create_graph">
    <property name="geometry">
     <rect>
-     <x>1200</x>
-     <y>820</y>
-     <width>191</width>
+     <x>910</x>
+     <y>700</y>
+     <width>151</width>
      <height>28</height>
     </rect>
    </property>
@@ -1339,9 +1339,9 @@ p, li { white-space: pre-wrap; }
   <widget class="QLineEdit" name="line_Title">
    <property name="geometry">
     <rect>
-     <x>1310</x>
-     <y>770</y>
-     <width>181</width>
+     <x>910</x>
+     <y>650</y>
+     <width>151</width>
      <height>31</height>
     </rect>
    </property>
@@ -1352,10 +1352,10 @@ p, li { white-space: pre-wrap; }
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>1150</x>
-     <y>750</y>
-     <width>101</width>
-     <height>16</height>
+     <x>950</x>
+     <y>560</y>
+     <width>91</width>
+     <height>20</height>
     </rect>
    </property>
    <property name="text">
@@ -1365,10 +1365,10 @@ p, li { white-space: pre-wrap; }
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>1380</x>
-     <y>750</y>
+     <x>970</x>
+     <y>630</y>
      <width>31</width>
-     <height>16</height>
+     <height>20</height>
     </rect>
    </property>
    <property name="text">
@@ -1378,17 +1378,21 @@ p, li { white-space: pre-wrap; }
   <widget class="QComboBox" name="line_Column">
    <property name="geometry">
     <rect>
-     <x>1090</x>
-     <y>770</y>
-     <width>211</width>
+     <x>910</x>
+     <y>580</y>
+     <width>151</width>
      <height>31</height>
     </rect>
    </property>
-   <item>
-    <property name="text">
-     <string>device.deviceCategory</string>
-    </property>
-   </item>
+   <property name="iconSize">
+    <size>
+     <width>5</width>
+     <height>5</height>
+    </size>
+   </property>
+   <property name="frame">
+    <bool>true</bool>
+   </property>
    <item>
     <property name="text">
      <string>geoNetwork.city</string>
@@ -1401,12 +1405,7 @@ p, li { white-space: pre-wrap; }
    </item>
    <item>
     <property name="text">
-     <string>geoNetwork.networkDomain</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>device.deviceCategory</string>
+     <string>trafficSource.source</string>
     </property>
    </item>
    <item>
@@ -1416,7 +1415,12 @@ p, li { white-space: pre-wrap; }
    </item>
    <item>
     <property name="text">
-     <string>trafficSource.source</string>
+     <string>device.deviceCategory</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>geoNetwork.networkDomain</string>
     </property>
    </item>
   </widget>

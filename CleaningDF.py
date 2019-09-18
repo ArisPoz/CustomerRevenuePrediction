@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-from sklearn import preprocessing
 from datetime import datetime
 
 """
@@ -37,12 +36,12 @@ def normalizing(df):
     return df
 
 
-def discovering_constant_columns(df):
-    discovering_consts = [col for col in df.columns if df[col].nunique() == 1]
-
-    # printing the total of columns dropped and the name of columns
-    print("Columns with just one value: ", len(discovering_consts), "columns")
-    print("Name of constant columns: ", discovering_consts)
+def discovering_constant_columns(df=None):
+    # discovering_consts = [col for col in df.columns if df[col].nunique() == 1]
+    #
+    # # printing the total of columns dropped and the name of columns
+    # print("Columns with just one value: ", len(discovering_consts), "columns")
+    # print("Name of constant columns: ", discovering_consts)
 
     to_drop = ["socialEngagementType", 'device.browserVersion', 'device.browserSize', 'device.flashVersion',
                'device.language', 'device.mobileDeviceBranding', 'device.mobileDeviceInfo',

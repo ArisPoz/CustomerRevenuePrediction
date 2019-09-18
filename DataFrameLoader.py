@@ -61,7 +61,6 @@ def load_df(csv_path, gui, chunk_size=150000):
 
 def load_train_set(ui):
     ui.update_progressbar(0)
-    global constants_columns
     if os.path.exists("DataSets/train_cleaned.csv"):
         ui.console_output.append("Loading cleaned train dataset...")
         train_df = load_df("DataSets/train_cleaned.csv", ui)
@@ -82,6 +81,7 @@ def load_test_set(ui):
     else:
         ui.console_output.append("Loading test dataset...")
         test_df = convert_json_columns_and_load("DataSets/test.csv", ui)
+        constants_columns = cDF.discovering_constant_columns()
         test_df = clean_data(test_df, constants_columns, ui)
         test_df.to_csv("DataSets/test_cleaned.csv", index=False)
     return test_df
@@ -97,7 +97,7 @@ def clean_data(df, to_drop, ui):
     df = cDF.filling_na_values(df)
     ui.console_output.append("Normalizing...")
     df = cDF.normalizing(df)
-    ui.console_output.append("Processing Date From Linux Time --> Day/Week/Month/Year...")
+    ui.console_output.append("Processing Date From Linux Time -> Day/Week/Month/Year...")
     df = cDF.add_date_features(df)
     ui.console_output.append("Fixing Date Format...")
     df = cDF.date_process(df)

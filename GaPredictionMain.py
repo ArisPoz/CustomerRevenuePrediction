@@ -19,7 +19,7 @@ Ui_MainWindow, QtBaseClass = uic.loadUiType('resources/gui.ui')
 
 class Ui(QtWidgets.QWidget, Ui_MainWindow):
     def __init__(self):
-        super(Ui, self).__init__()  # Call the inherited classes __init__ method
+        super(Ui, self).__init__()  # Call the inherited classes init method
         self.setWindowTitle("Ga Customer Revenue")
 
         icon = QtGui.QIcon('resources/ga.ico')
@@ -28,8 +28,8 @@ class Ui(QtWidgets.QWidget, Ui_MainWindow):
         Ui_MainWindow.__init__(self)
         self.setupUi(self)
 
-        self.setMaximumWidth(1070)
-        self.setMinimumWidth(1070)
+        self.setMaximumWidth(899)
+        self.setMinimumWidth(899)
 
         # hidden/disabled/read-only parts
         self.label_PleaseWait.hide()
@@ -63,7 +63,7 @@ class Ui(QtWidgets.QWidget, Ui_MainWindow):
     def add_tab_web_page(self, name, url, position, tooltip):
         tab = QtWidgets.QWidget()
         web_tab = QWebEngineView()
-        web_url = QtCore.QUrl.fromLocalFile(r""+url)
+        web_url = QtCore.QUrl.fromLocalFile(r"" + url)
         web_tab.load(web_url)
         layout = QtWidgets.QVBoxLayout()
         layout.addWidget(web_tab)
@@ -80,17 +80,18 @@ class Ui(QtWidgets.QWidget, Ui_MainWindow):
         if self.console.isVisible():
             self.console.hide()
             self.button_openConsole.setText("►")
-            self.setMaximumWidth(1070)
-            self.setMinimumWidth(1070)
-            self.resize(1070, 858)
+            self.setMaximumWidth(899)
+            self.setMinimumWidth(899)
+            self.resize(899, 749)
         else:
             self.console.show()
             self.button_openConsole.setText("◄")
-            self.setMaximumWidth(1500)
-            self.setMinimumWidth(1500)
-            self.resize(1500, 858)
+            self.setMaximumWidth(1072)
+            self.setMinimumWidth(1072)
+            self.resize(1072, 749)
 
     def get_progressbar_status(self):
+        QtCore.QCoreApplication.processEvents()
         return self.progressBar.value()
 
     def exit(self):
@@ -101,9 +102,11 @@ class Ui(QtWidgets.QWidget, Ui_MainWindow):
 
     def append(self, text):
         self.console_output.append(text)
+        QtCore.QCoreApplication.processEvents()
 
     def append_console(self, text):
         self.console.append("#" * 10 + '\n' + text)
+        QtCore.QCoreApplication.processEvents()
 
     def load_graphs(self, df):
         showPlots.show_revenue_graph(self, df)
@@ -143,21 +146,24 @@ class Ui(QtWidgets.QWidget, Ui_MainWindow):
 
     def load(self):
         global train_df
-        self.label_PleaseWait.show()
-        self.button_load.setEnabled(False)
-        self.console_output.append("Loading Train Data (~20GB).")
-        QtCore.QCoreApplication.processEvents()
-        self.console_output.append("Started at : " + str(dt.datetime.now().time()))
-        train_df = dfLoader.load_train_set(self)
-        self.console_output.append("Finished at : " + str(dt.datetime.now().time()))
-        self.console_output.append('Train data shape : ' + str(train_df.shape))
-        self.load_graphs(train_df)
+        if len(os.listdir("DataSets")) != 0:
+            self.label_PleaseWait.show()
+            self.button_load.setEnabled(False)
+            self.console_output.append("Loading Train Data (~20GB).")
+            QtCore.QCoreApplication.processEvents()
+            self.console_output.append("Started at : " + str(dt.datetime.now().time()))
+            train_df = dfLoader.load_train_set(self)
+            self.console_output.append("Finished at : " + str(dt.datetime.now().time()))
+            self.console_output.append('Train data shape : ' + str(train_df.shape))
+            self.load_graphs(train_df)
 
-        self.console_output.append("Successfully loaded train data.")
-        self.update_progressbar(100)
-        self.label_PleaseWait.hide()
-        self.button_prediction.setEnabled(True)
-        self.button_create_graph.setEnabled(True)
+            self.console_output.append("Successfully loaded train data.")
+            self.update_progressbar(100)
+            self.label_PleaseWait.hide()
+            self.button_prediction.setEnabled(True)
+            self.button_create_graph.setEnabled(True)
+        else:
+            self.console_output.append("Please move the train and test set inside the DataSets folder.")
 
 
 def main():
