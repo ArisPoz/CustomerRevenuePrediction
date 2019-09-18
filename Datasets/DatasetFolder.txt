@@ -1,0 +1,3 @@
+Copy the train and the test set to
+the DataSets folder, and then start
+the application.
