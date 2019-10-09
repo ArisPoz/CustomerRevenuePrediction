@@ -22,7 +22,7 @@ def show_revenue_graph(ui, df):
         os.mkdir('plots')
         ui.append_console("Directory Plots Created ")
     else:
-        ui.append_console("Directory Plots Already Exists")
+        ui.append_console("Directory Plots Already Exists ")
 
     figure = plt.figure(figsize=(10, 10))
     plt.scatter(range(df.shape[0]), np.sort(df["totals.transactionRevenue"].values))
