@@ -52,7 +52,7 @@ def discovering_constant_columns(df=None):
     return to_drop
 
 
-def show_data(df, data_type=object, limit=3):  # setting the function with df,
+def show_data(df, data_type=object, limit=3):  # setting the function with df
     n = df.select_dtypes(include=data_type)  # selecting the desired data type
     for column in n.columns:  # initializing the loop
         print("Name of column ", column, ': \n', "Uniques: ", df[column].unique()[:limit], "\n",
