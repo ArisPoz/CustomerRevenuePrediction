@@ -44,4 +44,5 @@ This project is licensed under the GNU License - see the [LICENSE](https://githu
 ![](/resources/GA_Customer_Revenue_Prediction.gif)
 
 # Thesis
+
 -- in progress --
