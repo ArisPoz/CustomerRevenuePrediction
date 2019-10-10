@@ -46,3 +46,4 @@ This project is licensed under the GNU License - see the [LICENSE](https://githu
 # Thesis
 
 -- in progress --
+-- Almost finished --
