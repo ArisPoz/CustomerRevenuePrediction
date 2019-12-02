@@ -44,5 +44,5 @@ This project is licensed under the GNU License - see the [LICENSE](https://githu
 ![](/resources/GA_Customer_Revenue_Prediction.gif)
 
 # Thesis
-* [Thesis PDF](/resources/Thesis.pdf)
-* [Thesis PPTX](/resources/Thesis.pptx)
+* [Thesis](/resources/Thesis.pdf)
+* [Thesis Presentation](/resources/Thesis_Presentation.pdf)
