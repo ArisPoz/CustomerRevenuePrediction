@@ -46,5 +46,5 @@ This project is licensed under the GNU License - see the [LICENSE](https://githu
 # Thesis
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
-|/resources/Thesis.pdf|/resources/Thesis.pptx|♣|
+|![](/resources/Thesis.pdf)|![](/resources/Thesis.pptx)|♣|
 
