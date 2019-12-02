@@ -25,8 +25,8 @@ This project is licensed under the GNU License - see the [LICENSE](https://githu
 
 * Thesis Project
 * International Hellenic University
-* Kaggle Competition 
-* https://www.kaggle.com/c/ga-customer-revenue-prediction
+* [Kaggle Competition](https://www.kaggle.com/c/ga-customer-revenue-prediction)
+* [Slides Carnival](https://www.slidescarnival.com/?utm_source=template)
 
 # Screenshots
 | | | |
