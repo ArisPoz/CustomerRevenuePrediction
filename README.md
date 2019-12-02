@@ -44,5 +44,5 @@ This project is licensed under the GNU License - see the [LICENSE](https://githu
 ![](/resources/GA_Customer_Revenue_Prediction.gif)
 
 # Thesis
-•[Thesis PDF](https://github.com/ArisPoz/CustomerRevenuePrediction/resources/Thesis.pdf)
-•[Thesis PPTX](https://github.com/ArisPoz/CustomerRevenuePrediction/resources/Thesis.pptx)
+•[Thesis PDF](/resources/Thesis.pdf)
+•[Thesis PPTX](/resources/Thesis.pptx)
