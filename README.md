@@ -46,3 +46,4 @@ This project is licensed under the GNU License - see the [LICENSE](https://githu
 # Thesis
 * [Thesis](/resources/Thesis.pdf)
 * [Thesis Presentation](/resources/Thesis_Presentation.pdf)
+* Thesis grade : 10
